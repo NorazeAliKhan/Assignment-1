@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for NEXUS Gaming Society events.">
+    <title>Register | NEXUS Gaming Society</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>NEXUS Gaming Society</h1>
+        <p>Connect. Compete. Level Up.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html" aria-current="page">Register</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Event Registration</h2>
+            <p>Complete the form below to register for a gaming event.</p>
+
+            <form id="registration-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="full-name">Full Name:</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        required
+                        minlength="3"
+                        maxlength="80"
+                        autocomplete="name"
+                    >
+
+                    <label for="email">University Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        placeholder="you@university.edu"
+                    >
+
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        required
+                        pattern="[0-9+() -]{7,20}"
+                        title="Enter 7–20 characters using digits, spaces, +, parentheses, or hyphens."
+                        autocomplete="tel"
+                    >
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event Selection</legend>
+
+                    <label for="event">Choose an Event:</label>
+                    <select id="event" name="event" required>
+                        <option value="">-- Select an event --</option>
+                        <option value="Gaming Tournament">Gaming Tournament</option>
+                        <option value="Game Development Workshop">Game Development Workshop</option>
+                        <option value="Esports Community Meetup">Esports Community Meetup</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+
+                    <label>
+                        <input type="radio" name="source" value="Social Media" required>
+                        Social Media
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="Friend">
+                        Friend
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="University">
+                        University
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="Other">
+                        Other
+                    </label>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+
+        <section aria-labelledby="saved-heading">
+            <h2 id="saved-heading">Saved Registrations</h2>
+
+            <p id="registration-message" role="status" aria-live="polite"></p>
+
+            <ul id="saved-registrations"></ul>
+
+            <button type="button" id="clear-registrations">
+                Clear All Registrations
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NEXUS Gaming Society</p>
+        <p>
+            <a
+                href="https://validator.w3.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >W3C HTML Validator</a>
+        </p>
+    </footer>
+
+</body>
+</html>
